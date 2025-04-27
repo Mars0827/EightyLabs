@@ -20,7 +20,7 @@ st.set_page_config(
 apply_styles()
 
 # Class names for our model
-CLASS_NAMES = ['salmo', 'cocci', 'ncd', 'healthy']
+CLASS_NAMES = ['cocci', 'salmo', 'ncd', 'healthy']
 
 # Disease descriptions
 DISEASE_INFO = {
@@ -57,7 +57,7 @@ def load_model_file():
 
 def preprocess_image(img_file):
     """Preprocess the uploaded image for prediction."""
-    img = Image.open(img_file).convert('RGB')
+    img = Image.open(img_file)
     img_resized = img.resize((224, 224))
     img_array = image.img_to_array(img_resized)
     img_array = np.expand_dims(img_array, axis=0)
