@@ -177,7 +177,7 @@ def main():
             with col1:
                 st.markdown('<div class="section-header">Uploaded Sample</div>', unsafe_allow_html=True)
                 img, processed_img = preprocess_image(uploaded_file)
-                st.image(img, use_column_width=True)
+                st.image(img, use_container_width=True)
             
             # Make prediction and display result
             with col2:
